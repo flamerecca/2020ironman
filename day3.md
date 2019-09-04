@@ -49,7 +49,7 @@ $ cp env-example .env
 $ docker-compose up -d nginx mysql redis workspace 
 ```
 >注意這邊的參數不能省略！省略了會一次打開所有的服務，電腦很快就撐不住了 ！
-
+>
 >然後，跟官網的範例不一樣，筆者這邊移除了 phpmyadmin 的服務，因為我討厭 phpmyadmin⋯⋯ 
 
 
