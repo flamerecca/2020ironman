@@ -29,27 +29,42 @@ Docker version 19.03.1, build 74b1e89
 
 ----
 
+什麼是 Laradock 呢？
+
 ![laradock logo](https://raw.githubusercontent.com/laradock/laradock/master/.github/home-page-images/laradock-logo.jpg)
 
-然後，我們下載 laradock。在 `Laravel60demo/` 裡面，我們執行
+
+
+然後，我們下載 Laradock。在 `Laravel60demo/` 裡面，我們執行
 
 ```
 $ git clone https://github.com/Laradock/laradock.git
 ```
 
-下載到指定位置之後 我們記得建立好 `.env` 檔案，這邊我們先使用原本就附加的範例檔案 `env-example` 
+下載到指定位置之後，我們進入到 `laradock/` 資料夾看看內容。
+
+```shell
+$ cd laradock
+$ ls
+
+```
+確認下載完成了，檔案也沒有問題，我們準備運行
+
+運行 Laradock 之前，我們記得建立好 Laradock 所需的 `.env` 檔案，這邊我們先使用原本就附加的範例檔案 `env-example`。
+
+在 `laradock/` 資料夾裡面執行
 
 ```
 $ cp env-example .env
 ```
 
-確認建立好之後，我們依據需要的服務
+確認建立好 `.env` 之後，我們來開啟運行網站所需的服務
 
 ```
-$ docker-compose up -d nginx mysql redis workspace 
+$ docker-compose up -d nginx mysql workspace 
 ```
 >注意這邊的參數不能省略！省略了會一次打開所有的服務，電腦很快就撐不住了 ！
 >
->然後，跟官網的範例不一樣，筆者這邊移除了 phpmyadmin 的服務，因為我討厭 phpmyadmin⋯⋯ 
+>跟官網的範例不一樣，筆者這邊移除了部分的服務，這樣讓之後的教學更加單純。
 
 
